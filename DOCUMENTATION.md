@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Reads the files/directories and adds the stat information.
 
 #### Params
+
 - **String** `inputPath`: The directory path.
 - **Function** `cb`: The callback function.
 
@@ -13,6 +14,7 @@ Reads the files/directories and adds the stat information.
 The sync version.
 
 #### Params
+
 - **String** `inputPath`: The directory path.
 
 #### Return
