@@ -1,12 +1,8 @@
-"use strict";
+import readDirAndStat from "../lib/index.js";
 
-const readDirAndStat = require("../lib");
-
-readDirAndStat((err, res) => {
+readDirAndStat().then(res => {
     console.log(res);
 });
-
-console.log(readDirAndStat.sync());
 // =>
 // [ { path: '.../read-dir-and-stat/.git',
 //     stat:
