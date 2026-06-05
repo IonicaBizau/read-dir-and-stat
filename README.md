@@ -74,13 +74,11 @@ yarn add read-dir-and-stat
 
 
 ```js
-const readDirAndStat = require("read-dir-and-stat");
+import readDirAndStat from "read-dir-and-stat";
 
-readDirAndStat((err, res) => {
+readDirAndStat().then(res => {
     console.log(res);
 });
-
-console.log(readDirAndStat.sync());
 // =>
 // [ { path: '.../read-dir-and-stat/.git',
 //     stat:
@@ -122,6 +120,26 @@ console.log(readDirAndStat.sync());
 
 
 
+## :memo: Documentation
+
+
+### `readDirAndStat(inputPath)`
+Reads the files/directories and adds the stat information.
+
+#### Params
+
+- **string** `inputPath`: The directory path.
+
+#### Return
+- **Promise** The promise with the result.
+
+
+
+
+
+
+
+
 
 ## :question: Get Help
 
@@ -132,35 +150,6 @@ There are few ways to get help:
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
-
-
-
-
-
-
-
-## :memo: Documentation
-
-
-### `readDirAndStat(inputPath, cb)`
-Reads the files/directories and adds the stat information.
-
-#### Params
-
-- **String** `inputPath`: The directory path.
-- **Function** `cb`: The callback function.
-
-### `sync(inputPath)`
-The sync version.
-
-#### Params
-
-- **String** `inputPath`: The directory path.
-
-#### Return
-- **Array** An array of objects containing:
- - `path` (String): The full file/directory path
- - `stat` (Object): The stat result.
 
 
 
